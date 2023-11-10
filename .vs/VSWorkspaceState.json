@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "\\android",
+    "\\android\\app",
+    "\\android\\gradle",
+    "\\android\\gradle\\wrapper",
+    "\\lib",
+    "\\lib\\models",
+    "\\lib\\view",
+    "\\lib\\viewmodel"
+  ],
+  "PreviewInSolutionExplorer": false
+}
