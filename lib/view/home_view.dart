@@ -13,6 +13,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Text('Home Page'),
       ),
+
       bottomNavigationBar: BottomNavBar(viewModel: viewModel, context: context),
     );
   }

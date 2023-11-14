@@ -19,6 +19,7 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
       selectedItemColor: Colors.black,
       unselectedItemColor: Colors.black,
       items: const <BottomNavigationBarItem>[
@@ -31,7 +32,7 @@ class BottomNavBar extends StatelessWidget {
           label: 'My Favorites',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.search),
+          icon: Icon(Icons.local_dining_sharp),
           label: 'Find Pairings',
         ),
         BottomNavigationBarItem(
