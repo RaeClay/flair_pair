@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'favoritespage_view.dart'; // Replace with your actual page imports
 import 'pairingpage_view.dart';
 import 'profilepage_view.dart';
+import 'home_view.dart'; // Import for HomePage
 import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart'; // Import the ViewModel
 
 class BottomNavBar extends StatelessWidget {
@@ -18,7 +19,13 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      selectedItemColor: Colors.black,
+      unselectedItemColor: Colors.black,
       items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home), // Icon for Home
+          label: 'Home', // Label for Home
+        ),
         BottomNavigationBarItem(
           icon: Icon(Icons.favorite),
           label: 'My Favorites',
@@ -37,12 +44,15 @@ class BottomNavBar extends StatelessWidget {
         viewModel.selectTab(index);
         switch (index) {
           case 0:
-            Navigator.push(context, MaterialPageRoute(builder: (context) => FavoritesPage()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage())); // Navigate to HomePage
             break;
           case 1:
-            Navigator.push(context, MaterialPageRoute(builder: (context) => PairingsPage()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => FavoritesPage()));
             break;
           case 2:
+            Navigator.push(context, MaterialPageRoute(builder: (context) => PairingsPage()));
+            break;
+          case 3:
             Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
             break;
         }
