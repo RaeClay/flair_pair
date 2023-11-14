@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false, // This disables the automatic back button
         toolbarHeight: 100, // Increased height
         backgroundColor: Colors.white, // White background color
         title: Padding(
