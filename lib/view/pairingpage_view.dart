@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flair_pair/viewmodel/pairing_view_model.dart';
 import 'package:provider/provider.dart';
-import 'bottom_navbar.dart';  // Import the custom bottom navigation bar
-import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';  // Import the ViewModel
+import 'bottom_navbar.dart';
+import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';
 
 class PairingsPage extends StatelessWidget {
   final BottomNavBarVM viewModel = BottomNavBarVM();
@@ -53,7 +53,7 @@ class PairingBody extends StatelessWidget {
                     title: Text(pairing.foodName),
                     subtitle: Text(pairing.alcoholName),
                     onTap: () {
-                      // Handle item tap (e.g., navigate to details)
+                      // Handle item tap (like, navigate to details)
                     },
                   );
                 },
@@ -66,5 +66,7 @@ class PairingBody extends StatelessWidget {
     );
   }
 }
+
+
 
 

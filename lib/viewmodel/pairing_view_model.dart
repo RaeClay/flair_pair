@@ -6,7 +6,7 @@ class PairingViewModel extends ChangeNotifier {
   List<PairingModel> _pairings = [
     PairingModel(
       foodName: 'Cheese',
-      alcoholName: 'Red Wine',
+      alcoholName: 'Wine',
       pairingDescription: 'A classic combination for wine enthusiasts.',
     ),
     // Add more pairings as needed

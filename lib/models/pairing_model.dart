@@ -9,3 +9,4 @@ class PairingModel {
     required this.pairingDescription,
   });
 }
+
