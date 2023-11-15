@@ -3,6 +3,7 @@ import 'package:flair_pair/viewmodel/pairing_view_model.dart';
 import 'package:provider/provider.dart';
 import 'bottom_navbar.dart';
 import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';
+import 'package:flair_pair/view/customappbar.dart';
 
 class PairingsPage extends StatelessWidget {
   final BottomNavBarVM viewModel = BottomNavBarVM();
@@ -10,9 +11,7 @@ class PairingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Find Pairings'),
-      ),
+      appBar: CustomAppBar(),
       body: ChangeNotifierProvider(
         create: (context) => PairingViewModel(),
         child: PairingBody(),

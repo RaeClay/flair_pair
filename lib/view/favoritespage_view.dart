@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'bottom_navbar.dart';  // Import the custom bottom navigation bar
 import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';  // Import the ViewModel
+import 'package:flair_pair/view/customappbar.dart';
 
 class FavoritesPage extends StatelessWidget {
   final BottomNavBarVM viewModel = BottomNavBarVM();
@@ -8,9 +9,7 @@ class FavoritesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('My Favorites'),
-      ),
+      appBar: CustomAppBar(),
       body: Center(
         child: Text('This is the Favorites Page'),
       ),
