@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flair_pair/viewmodel/pairing_view_model.dart';
-import 'package:provider/provider.dart';
 import 'bottom_navbar.dart';
 import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';
 import 'package:flair_pair/view/customappbar.dart';
@@ -8,13 +7,13 @@ import 'package:flair_pair/models/pairing_model.dart';
 
 
 class PairingsPage extends StatelessWidget {
-  // final BottomNavBarVM viewModel = BottomNavBarVM(); // turned off for rn
+  final BottomNavBarVM viewModel = BottomNavBarVM(); // turned off for rn
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
       body: PairingsScreen(),
-      //bottomNavigationBar: BottomNavBar(viewModel: viewModel, context: context),  // turned off for rn
+      bottomNavigationBar: BottomNavBar(viewModel: viewModel, context: context),  // turned off for rn
     );
   }
 }
