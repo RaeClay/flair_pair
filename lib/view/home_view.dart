@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:flair_pair/view/customappbar.dart';
-import 'bottom_navbar.dart';  // Import the custom bottom navigation bar
-import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';  // Import the ViewModel
+import 'bottom_navbar.dart';
+import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';
 
 class HomePage extends StatelessWidget {
   final BottomNavBarVM viewModel = BottomNavBarVM();
