@@ -3,7 +3,7 @@ import 'package:flair_pair/models/pairing_model.dart';
 
 
 class PairingViewModel extends ChangeNotifier {
-  List<List<PairingModel>> _allPairings = [
+  final List<List<PairingModel>> _allPairings = [
     [
       PairingModel(
         foodName: 'Cheese',
@@ -35,6 +35,9 @@ class PairingViewModel extends ChangeNotifier {
   ]; // end of list of lists (_allPairings)
 
   List<PairingModel> searchPairings(String query) {
+    if (query.isEmpty) {
+      return []; // Return an empty list if the query is empty
+    }
     query = query.toLowerCase();
     List<PairingModel> results = [];
 
