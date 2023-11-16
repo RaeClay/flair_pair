@@ -96,9 +96,30 @@ class _PairingsScreenState extends State<PairingsScreen> {
         itemCount: _searchResults.length,
         itemBuilder: (context, index) {     // Define how each item in the list should be built
           PairingModel pairing = _searchResults[index];     // Get the PairingModel instance at the current index
-          return ListTile(
-          title: Text('${pairing.foodName} and ${pairing.alcoholName}'), // Display both foodName and alcoholName in the title
-          subtitle: Text(pairing.pairingDescription),                   // Display pairingDescription in the subtitle
+        return Card(
+          // Add padding and elevation for a material-like appearance
+          margin: EdgeInsets.all(8.0),
+          elevation: 5.0,
+          // The content of the Card
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Display both foodName and alcoholName in the title
+                Text(
+                  '${pairing.foodName} and ${pairing.alcoholName}',
+                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                ),
+                // Display pairingDescription in the subtitle
+                SizedBox(height: 8.0),
+                Text(
+                  pairing.pairingDescription,
+                  style: TextStyle(fontSize: 14.0),
+                ),
+              ],
+            ),
+          ),
         );
         },
       ),
