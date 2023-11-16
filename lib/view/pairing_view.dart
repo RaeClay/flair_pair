@@ -4,6 +4,7 @@ import 'package:flair_pair/view/bottom_navbar.dart';
 import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';
 import 'package:flair_pair/view/customappbar.dart';
 import 'package:flair_pair/models/pairing_model.dart';
+import 'package:flair_pair/view/pairing_detail_screen.dart';
 import 'package:flair_pair/repositories/pairing_repository.dart';
 
 
@@ -103,40 +104,46 @@ void _onSearchTextChanged(String query) {
         itemBuilder: (context, index) {     // Define how each item in the list should be built
           PairingModel pairing = _searchResults[index];     // Get the PairingModel instance at the current index
         
-        return Card(    // return search results as listview of cards
-          margin: EdgeInsets.all(8.0),
-          elevation: 5.0,
-          clipBehavior: Clip.hardEdge,
-          child: InkWell(
-          splashColor: Colors.blue.withAlpha(30),
+        return InkWell(
           onTap: () {
-            debugPrint('Card tapped.');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PairingDetailScreen(
+                  foodName: pairing.foodName,
+                  alcoholName: pairing.alcoholName,
+                  pairingDescription: pairing.pairingDescription,
+                ),
+              ),
+            );
           },
-          // The content of the Card
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(       // Display both foodName and alcoholName in the title
-                  '${pairing.foodName} and ${pairing.alcoholName}',
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 8.0),      // Display pairingDescription in the subtitle
-                Text(
-                  pairing.pairingDescription,
-                  style: TextStyle(fontSize: 14.0),
-                ),
-              ],
+          child: Card(
+            margin: EdgeInsets.all(8.0),
+            elevation: 5.0,
+            clipBehavior: Clip.hardEdge,
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '${pairing.foodName} and ${pairing.alcoholName}',
+                    style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 8.0),
+                  Text(
+                    pairing.pairingDescription,
+                    style: TextStyle(fontSize: 14.0),
+                  ),
+                ],
+              ),
             ),
           ),
-          ),
         );
-        },
-      ),
-    );
-  } // end of results listview build
+      },
+    ),
+  );
 }
 
-
+}
 
