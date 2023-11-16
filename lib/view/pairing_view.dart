@@ -4,27 +4,33 @@ import 'package:flair_pair/view/bottom_navbar.dart';
 import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';
 import 'package:flair_pair/view/customappbar.dart';
 import 'package:flair_pair/models/pairing_model.dart';
+import 'package:flair_pair/repositories/pairing_repository.dart';
 
 
 class PairingsPage extends StatelessWidget {
-  final BottomNavBarVM viewModel = BottomNavBarVM(); 
+  final PairingViewModel _pairingViewModel = PairingViewModel(PairingRepository());
+  final BottomNavBarVM _viewModel = BottomNavBarVM();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: PairingsScreen(),
-      bottomNavigationBar: BottomNavBar(viewModel: viewModel, context: context), 
+      body: PairingsScreen(pairingViewModel: _pairingViewModel),
+      bottomNavigationBar: BottomNavBar(viewModel: _viewModel, context: context),
     );
   }
 }
 
 class PairingsScreen extends StatefulWidget {
+   final PairingViewModel pairingViewModel;
+
+  PairingsScreen({required this.pairingViewModel});
+
   @override
   _PairingsScreenState createState() => _PairingsScreenState();
 }
 
 class _PairingsScreenState extends State<PairingsScreen> {
-  PairingViewModel _pairingViewModel = PairingViewModel();
   TextEditingController _searchController = TextEditingController();
   List<PairingModel> _searchResults = [];
 
@@ -83,11 +89,11 @@ class _PairingsScreenState extends State<PairingsScreen> {
   } // end of search field build
 
   // update when text changes
-  void _onSearchTextChanged(String query) {
-    setState(() {
-      _searchResults = _pairingViewModel.searchPairings(query);
-    });
-  }
+void _onSearchTextChanged(String query) {
+  setState(() {
+    _searchResults = widget.pairingViewModel.searchPairings(query);
+  });
+}
 
 // Widget function to build and display scrollable list of pairing search results
   Widget _buildResultsList() {

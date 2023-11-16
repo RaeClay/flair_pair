@@ -1,40 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flair_pair/models/pairing_model.dart';
-
+import 'package:flair_pair/repositories/pairing_repository.dart';
 
 class PairingViewModel extends ChangeNotifier {
-  final List<List<PairingModel>> _allPairings = [
-    [
-      PairingModel(
-        foodName: 'Cheese',
-        alcoholName: 'Wine',
-        pairingDescription: 'A classic combination for wine enthusiasts.',
-      ),
-    ],
-    [
-      PairingModel(
-        foodName: 'Pizza',
-        alcoholName: 'Beer',
-        pairingDescription: 'An all-time favorite pairing for a casual meal.',
-      ),
-    ],
-    [
-      PairingModel(
-        foodName: 'Steak',
-        alcoholName: 'Wine',
-        pairingDescription: 'Another classic combination for wine enthusiasts.',
-      ),
-    ],
-    [
-      PairingModel(
-        foodName: 'Pretzel',
-        alcoholName: 'Beer',
-        pairingDescription: 'A timeless combination of salty and hoppy.',
-      ),
-    ],
-  ]; // end of list of lists (_allPairings) for hardcoded data
+  final PairingRepository _pairingRepository;
 
+  PairingViewModel(this._pairingRepository);
 
+  List<List<PairingModel>> getAllPairings() {
+    return _pairingRepository.getAllPairings();
+  }
+  
   // Function to search pairings based on a query
   List<PairingModel> searchPairings(String query) {
     if (query.isEmpty) {
@@ -44,13 +20,12 @@ class PairingViewModel extends ChangeNotifier {
 
     List<PairingModel> results = [];      // Initialize a list to store search results
 
-
   // Iterate through allPairings, which is a list of lists of PairingModel
-    for (List<PairingModel> pairingList in _allPairings) {
-      for (PairingModel pairing in pairingList) {       // Iterate through each PairingModel in the current pairingList
+   for (List<PairingModel> pairingList in _pairingRepository.getAllPairings()) {
+      for (PairingModel pairing in pairingList) {
         if (pairing.foodName.toLowerCase().contains(query) ||
             pairing.alcoholName.toLowerCase().contains(query)) {
-          results.add(pairing);   // Add the PairingModel to the results list if it matches the query
+          results.add(pairing);
         }
       }
     }
