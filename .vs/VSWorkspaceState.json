@@ -1,11 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\android",
     "\\lib",
     "\\lib\\models",
     "\\lib\\view",
-    "\\lib\\viewmodel"
+    "\\lib\\viewmodel",
+    "\\windows"
   ],
-  "SelectedNode": "\\pubspec.yaml",
+  "SelectedNode": "\\lib\\view\\pairing_view.dart",
   "PreviewInSolutionExplorer": false
 }

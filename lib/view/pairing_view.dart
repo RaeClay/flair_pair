@@ -7,13 +7,13 @@ import 'package:flair_pair/models/pairing_model.dart';
 
 
 class PairingsPage extends StatelessWidget {
-  final BottomNavBarVM viewModel = BottomNavBarVM(); // turned off for rn
+  final BottomNavBarVM viewModel = BottomNavBarVM(); 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
       body: PairingsScreen(),
-      bottomNavigationBar: BottomNavBar(viewModel: viewModel, context: context),  // turned off for rn
+      bottomNavigationBar: BottomNavBar(viewModel: viewModel, context: context), 
     );
   }
 }
@@ -64,7 +64,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
                 controller: _searchController,
                 onChanged: _onSearchTextChanged,
                 decoration: InputDecoration(
-                  hintText: 'Enter your search query',
+                  hintText: 'Search by food or alcohol to find pairings',
                   border: InputBorder.none,
                 ),
               ),
@@ -80,28 +80,30 @@ class _PairingsScreenState extends State<PairingsScreen> {
         ],
       ),
     );
-  }
+  } // end of search field build
 
+  // update when text changes
   void _onSearchTextChanged(String query) {
     setState(() {
       _searchResults = _pairingViewModel.searchPairings(query);
     });
   }
 
+// Widget function to build and display scrollable list of pairing search results
   Widget _buildResultsList() {
     return Expanded(
       child: ListView.builder(
         itemCount: _searchResults.length,
-        itemBuilder: (context, index) {
-          PairingModel pairing = _searchResults[index];
+        itemBuilder: (context, index) {     // Define how each item in the list should be built
+          PairingModel pairing = _searchResults[index];     // Get the PairingModel instance at the current index
           return ListTile(
-            title: Text(pairing.foodName),
-            subtitle: Text(pairing.alcoholName),
-          );
+          title: Text('${pairing.foodName} and ${pairing.alcoholName}'), // Display both foodName and alcoholName in the title
+          subtitle: Text(pairing.pairingDescription),                   // Display pairingDescription in the subtitle
+        );
         },
       ),
     );
-  }
+  } // end of results listview build
 }
 
 
