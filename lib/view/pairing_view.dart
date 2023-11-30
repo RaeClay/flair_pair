@@ -6,6 +6,7 @@ import 'package:flair_pair/view/customappbar.dart';
 import 'package:flair_pair/models/pairing_model.dart';
 import 'package:flair_pair/view/pairing_detail_screen.dart';
 import 'package:flair_pair/repositories/pairing_repository.dart';
+import 'package:flair_pair/view/background_deco.dart';
 
 
 class PairingsPage extends StatelessWidget {
@@ -17,16 +18,7 @@ class PairingsPage extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(),
       body: Container (
-          decoration: BoxDecoration(
-          gradient: RadialGradient(
-            colors: [
-              Colors.indigo[400]!,
-              Color.fromARGB(255, 224, 224, 224)!,
-            ],
-            center: Alignment.center,
-            radius: 0.75,
-          ),
-        ),
+          decoration: BackgroundDeco.getRadialGradient(),
         child: PairingsScreen(pairingViewModel: _pairingViewModel),
       ),
       bottomNavigationBar: BottomNavBar(viewModel: _viewModel, context: context),

@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flair_pair/view/customappbar.dart';
 import 'package:flair_pair/view/bottom_navbar.dart';
 import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';
+import 'package:flair_pair/view/background_deco.dart';
 
 class HomePage extends StatelessWidget {
   final BottomNavBarVM viewModel = BottomNavBarVM();
@@ -12,16 +13,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(),
       body: Container(
-        decoration: BoxDecoration(
-          gradient: RadialGradient(
-            colors: [
-              Colors.indigo[400]!,
-              Color.fromARGB(255, 224, 224, 224)!,
-            ],
-            center: Alignment.center,
-            radius: 0.75,
-          ),
-        ),
+        decoration: BackgroundDeco.getRadialGradient(),
         child: Column(
           children: <Widget>[
             SizedBox(height: 20),
