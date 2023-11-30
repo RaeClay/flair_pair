@@ -16,7 +16,19 @@ class PairingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: PairingsScreen(pairingViewModel: _pairingViewModel),
+      body: Container (
+          decoration: BoxDecoration(
+          gradient: RadialGradient(
+            colors: [
+              Colors.indigo[400]!,
+              Color.fromARGB(255, 224, 224, 224)!,
+            ],
+            center: Alignment.center,
+            radius: 0.75,
+          ),
+        ),
+        child: PairingsScreen(pairingViewModel: _pairingViewModel),
+      ),
       bottomNavigationBar: BottomNavBar(viewModel: _viewModel, context: context),
     );
   }
@@ -57,6 +69,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
           color: Colors.grey,
           width: 1.0,
         ),
+        color: Color.fromRGBO(255, 255, 255, 0.75), // Transparent white background
       ),
       child: Row(
         children: [
