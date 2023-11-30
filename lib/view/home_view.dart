@@ -15,21 +15,21 @@ class HomePage extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: RadialGradient(
             colors: [
-              Colors.grey[800]!,
-              Colors.deepOrangeAccent,
+              Colors.indigo[400]!,
+              Color.fromARGB(255, 224, 224, 224)!,
             ],
             center: Alignment.center,
-            radius: 1.0,
+            radius: 0.75,
           ),
         ),
         child: Column(
           children: <Widget>[
             SizedBox(height: 20),
             Expanded(
-              flex: 2, // Adjusted flex for carousel
+              flex: 5, // Adjusted flex for carousel
               child: CarouselSlider(
                 options: CarouselOptions(
-                  height: 350, // Increased height of the carousel
+                  height: 350,
                   viewportFraction: 0.8,
                   enlargeCenterPage: true,
                 ),
@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
                   return Builder(
                     builder: (BuildContext context) {
                       return Container(
-                        margin: EdgeInsets.symmetric(horizontal: 5.0),
+                        margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 7.0),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20),
@@ -45,15 +45,15 @@ class HomePage extends StatelessWidget {
                             BoxShadow(
                               color: Colors.black.withOpacity(0.3),
                               spreadRadius: 2,
-                              blurRadius: 5,
+                              blurRadius: 2,
                               offset: Offset(0, 3),
                             ),
                           ],
                         ),
                         child: Center(
                           child: Text(
-                            'Button $i',
-                            style: TextStyle(fontSize: 24, color: Colors.white),
+                            'Content $i',
+                            style: TextStyle(fontSize: 24, color: Colors.black),
                           ),
                         ),
                       );
@@ -76,7 +76,7 @@ class HomePage extends StatelessWidget {
                         },
                         child: Text('Tips', style: TextStyle(color: Colors.black)),
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.white,
+                          backgroundColor: Colors.white,
                           padding: EdgeInsets.symmetric(vertical: 100),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30), // Rounded edges
@@ -92,7 +92,7 @@ class HomePage extends StatelessWidget {
                         },
                         child: Text('For you', style: TextStyle(color: Colors.black)),
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.white,
+                          backgroundColor: Colors.white,
                           padding: EdgeInsets.symmetric(vertical: 100),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30), // Rounded edges
