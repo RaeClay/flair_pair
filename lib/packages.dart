@@ -12,14 +12,17 @@ export 'package:flair_pair/viewmodel/pairing_view_model.dart';
 export 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';
 
 // views
-export 'package:flair_pair/view/bottom_navbar.dart';
-export 'package:flair_pair/view/customappbar.dart';
 export 'package:flair_pair/view/home_view.dart';
 export 'package:flair_pair/view/pairing_detail_screen.dart';
 export 'package:flair_pair/view/pairing_view.dart';
 export 'package:flair_pair/view/profilepage_view.dart';
-export 'package:flair_pair/view/background_deco.dart';
 export 'package:flair_pair/view/favoritespage_view.dart';
 
 // repositories
 export 'package:flair_pair/repositories/pairing_repository.dart';
+
+// custom widgets
+export 'package:flair_pair/customwidgets/background_deco.dart';
+export 'package:flair_pair/customwidgets/customappbar.dart';
+export 'package:flair_pair/customwidgets/bottom_navbar.dart';
+export 'package:flair_pair/customwidgets/carousel_items.dart';
