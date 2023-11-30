@@ -1,4 +1,4 @@
-import 'package:flair_pair/models/pairing_model.dart';
+import 'package:flair_pair/packages.dart';
 
 class PairingRepository {
   final List<List<PairingModel>> _allPairings = [

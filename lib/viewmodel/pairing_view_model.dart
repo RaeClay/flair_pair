@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flair_pair/models/pairing_model.dart';
-import 'package:flair_pair/repositories/pairing_repository.dart';
+import 'package:flair_pair/packages.dart';
 
 class PairingViewModel extends ChangeNotifier {
   final PairingRepository _pairingRepository;

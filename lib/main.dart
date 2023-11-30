@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'view/home_view.dart'; // home view
-
+import 'package:flair_pair/packages.dart';
 
 void main() => runApp(MyApp());
 

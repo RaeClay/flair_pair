@@ -3,12 +3,7 @@ This file contains the code that formats the bottom navigation bar
 and the logic needed to navigate to each page
 */
 
-import 'package:flutter/material.dart';
-import 'favoritespage_view.dart'; // Replace with your actual page imports
-import 'pairing_view.dart';
-import 'profilepage_view.dart';
-import 'home_view.dart'; // Import for HomePage
-import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart'; // Import the ViewModel
+import 'package:flair_pair/packages.dart';
 
 class BottomNavBar extends StatelessWidget {
   final BottomNavBarVM viewModel;

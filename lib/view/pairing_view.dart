@@ -1,12 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flair_pair/viewmodel/pairing_view_model.dart';
-import 'package:flair_pair/view/bottom_navbar.dart';
-import 'package:flair_pair/viewmodel/bottom_navbar_vm.dart';
-import 'package:flair_pair/view/customappbar.dart';
-import 'package:flair_pair/models/pairing_model.dart';
-import 'package:flair_pair/view/pairing_detail_screen.dart';
-import 'package:flair_pair/repositories/pairing_repository.dart';
-import 'package:flair_pair/view/background_deco.dart';
+import 'package:flair_pair/packages.dart';
 
 
 class PairingsPage extends StatelessWidget {
