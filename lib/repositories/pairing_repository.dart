@@ -1,8 +1,8 @@
 import 'package:flair_pair/packages.dart';
 
 class PairingRepository {
-  final List<List<PairingModel>> _allPairings = [
-    [
+  final Map<String, List<PairingModel>> _allPairings = {
+    'Wine': [
       PairingModel(
         foodName: 'Cheese',
         alcoholName: 'Wine',
@@ -19,7 +19,7 @@ class PairingRepository {
         pairingDescription: 'Lighten up with grilled veggies and a crisp white wine.',
       ),
     ],
-    [
+    'Beer': [
       PairingModel(
         foodName: 'Steak',
         alcoholName: 'Red Wine',
@@ -36,7 +36,7 @@ class PairingRepository {
         pairingDescription: 'Pretzels go well with a cold beer.',
       ),
     ],
-    [
+    'Sake': [
       PairingModel(
         foodName: 'Sushi',
         alcoholName: 'Sake',
@@ -53,26 +53,30 @@ class PairingRepository {
         pairingDescription: 'Teriyaki chicken and sake, a delightful combination.',
       ),
     ],
-    [
+    'IPA': [
       PairingModel(
         foodName: 'Buffalo Wings',
         alcoholName: 'IPA',
         pairingDescription: 'Kick up the heat with spicy wings and a hoppy IPA.',
       ),
+    ],
+    'Tequila': [
       PairingModel(
         foodName: 'Tacos',
         alcoholName: 'Tequila',
         pairingDescription: 'Salty, spicy tacos to complement Tequila.',
       ),
+    ],
+    'Chardonnay': [
       PairingModel(
         foodName: 'Oysters',
         alcoholName: 'Chardonnay',
         pairingDescription: 'Savor the briny goodness of oysters with a buttery Chardonnay.',
       ),
-    ]
-  ]; // end of list of lists (_allPairings) for hardcoded data
+    ],
+  }; // end of map (_allPairings) for hardcoded data
 
-  List<List<PairingModel>> getAllPairings() {
+  Map<String, List<PairingModel>> getAllPairings() {
     return _allPairings;
   }
 
