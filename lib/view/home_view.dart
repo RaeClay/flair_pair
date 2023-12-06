@@ -3,15 +3,17 @@ import 'package:flair_pair/packages.dart';
 class HomePage extends StatelessWidget {
   final BottomNavBarVM viewModel = BottomNavBarVM();
 
+  HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: Container(
         decoration: BackgroundDeco.getRadialGradient(),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               flex: 5, // Adjusted flex for carousel
               child: CarouselSlider(
@@ -33,32 +35,35 @@ class HomePage extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {
-                          // Implement action for Tips
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => OnboardingPage1()),
+                          );
                         },
-                        child: Text('Tips', style: TextStyle(color: Colors.black)),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
-                          padding: EdgeInsets.symmetric(vertical: 100),
+                          padding: const EdgeInsets.symmetric(vertical: 100),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30), // Rounded edges
                           ),
                         ),
+                        child: const Text('Tips', style: TextStyle(color: Colors.black)),
                       ),
                     ),
-                    SizedBox(width: 10), // Space between buttons
+                    const SizedBox(width: 10), // Space between buttons
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {
                           // Implement action for For you
                         },
-                        child: Text('For you', style: TextStyle(color: Colors.black)),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
-                          padding: EdgeInsets.symmetric(vertical: 100),
+                          padding: const EdgeInsets.symmetric(vertical: 100),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30), // Rounded edges
                           ),
                         ),
+                        child: const Text('For you', style: TextStyle(color: Colors.black)),
                       ),
                     ),
                   ],

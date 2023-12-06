@@ -7,7 +7,7 @@ class PairingDetailScreen extends StatelessWidget {
   final String alcoholName;
   final String pairingDescription;
 
-  PairingDetailScreen({
+  PairingDetailScreen({super.key, 
     required this.foodName,
     required this.alcoholName,
     required this.pairingDescription,
@@ -16,7 +16,7 @@ class PairingDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -33,11 +33,11 @@ class PairingDetailScreen extends StatelessWidget {
                       color: Colors.blue, // Replace with your image or asset
                       // Add image or asset decoration
                     ),
-                    SizedBox(height: 8.0),
+                    const SizedBox(height: 8.0),
                     Text('Food: $foodName'),
                   ],
                 ),
-                SizedBox(width: 16.0),
+                const SizedBox(width: 16.0),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -47,16 +47,16 @@ class PairingDetailScreen extends StatelessWidget {
                       color: Colors.red, // Replace with your image or asset
                       // Add image or asset decoration
                     ),
-                    SizedBox(height: 8.0),
+                    const SizedBox(height: 8.0),
                     Text('Alcohol: $alcoholName'),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Text(
               'Description: $pairingDescription',
-              style: TextStyle(fontSize: 16.0),
+              style: const TextStyle(fontSize: 16.0),
             ),
             // Add more details as needed
           ],

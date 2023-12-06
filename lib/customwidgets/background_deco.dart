@@ -6,7 +6,7 @@ class BackgroundDeco {
       gradient: RadialGradient(
             colors: [
               Colors.indigo[400]!,  //radial
-              Color.fromARGB(255, 224, 224, 224)!,  //background
+              const Color.fromARGB(255, 224, 224, 224),  //background
             ],
             center: Alignment.center,
             radius: 0.75,
