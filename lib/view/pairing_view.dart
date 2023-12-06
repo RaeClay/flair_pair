@@ -5,10 +5,12 @@ class PairingsPage extends StatelessWidget {
   final PairingViewModel _pairingViewModel = PairingViewModel(PairingRepository());
   final BottomNavBarVM _viewModel = BottomNavBarVM();
 
+  PairingsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: Container (
           decoration: BackgroundDeco.getRadialGradient(),
         child: PairingsScreen(pairingViewModel: _pairingViewModel),
@@ -21,14 +23,14 @@ class PairingsPage extends StatelessWidget {
 class PairingsScreen extends StatefulWidget {
    final PairingViewModel pairingViewModel;
 
-  PairingsScreen({required this.pairingViewModel});
+  const PairingsScreen({super.key, required this.pairingViewModel});
 
   @override
   _PairingsScreenState createState() => _PairingsScreenState();
 }
 
 class _PairingsScreenState extends State<PairingsScreen> {
-  TextEditingController _searchController = TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
   List<PairingModel> _searchResults = [];
 
   @override
@@ -38,7 +40,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
       child: Column(
         children: [
           _buildSearchField(),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           _buildResultsList(),
         ],
       ),
@@ -53,21 +55,21 @@ class _PairingsScreenState extends State<PairingsScreen> {
           color: Colors.grey,
           width: 1.0,
         ),
-        color: Color.fromRGBO(255, 255, 255, 0.75), // Transparent white background
+        color: const Color.fromRGBO(255, 255, 255, 0.75), // Transparent white background
       ),
       child: Row(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Icon(Icons.search),
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 8.0),
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: TextField(
                 controller: _searchController,
                 onChanged: _onSearchTextChanged,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Search by food or alcohol to find pairings',
                   border: InputBorder.none,
                 ),
@@ -75,7 +77,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
             ),
           ),
           IconButton(
-            icon: Icon(Icons.clear),
+            icon: const Icon(Icons.clear),
             onPressed: () {
               _searchController.clear();
               _onSearchTextChanged('');
@@ -115,7 +117,7 @@ void _onSearchTextChanged(String query) {
             );
           },
           child: Card(
-            margin: EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(8.0),
             elevation: 5.0,
             clipBehavior: Clip.hardEdge,
             child: Padding(
@@ -125,12 +127,12 @@ void _onSearchTextChanged(String query) {
                 children: [
                   Text(
                     '${pairing.foodName} and ${pairing.alcoholName}',
-                    style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 8.0),
+                  const SizedBox(height: 8.0),
                   Text(
                     pairing.pairingDescription,
-                    style: TextStyle(fontSize: 14.0),
+                    style: const TextStyle(fontSize: 14.0),
                   ),
                 ],
               ),

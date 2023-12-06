@@ -9,7 +9,7 @@ class BottomNavBar extends StatelessWidget {
   final BottomNavBarVM viewModel;
   final BuildContext context;
 
-  BottomNavBar({required this.viewModel, required this.context});
+  const BottomNavBar({super.key, required this.viewModel, required this.context});
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,8 @@
 import 'package:flair_pair/packages.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomAppBar({super.key});
+
   @override
   Size get preferredSize => const Size.fromHeight(100);
 
@@ -11,20 +13,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       toolbarHeight: preferredSize.height,
       backgroundColor: Colors.white,
       title: Padding(
-        padding: EdgeInsets.only(top: 50, bottom: 20),
+        padding: const EdgeInsets.only(top: 50, bottom: 20),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text(
               'FLAIRPAIR',
               style: GoogleFonts.bungeeShade(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   color: Colors.black,
                   fontSize: 44,
                 ),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Text(
               'Elevate Your Enjoyment',
               style: GoogleFonts.archivoNarrow(
@@ -34,8 +36,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
             ),
-            SizedBox(width: 5),
-            Icon(
+            const SizedBox(width: 5),
+            const Icon(
               Icons.sports_bar,
               size: 16,
               color: Colors.black,
