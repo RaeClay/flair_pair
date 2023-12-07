@@ -30,7 +30,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             Text(
               'Elevate Your Enjoyment.',
               style: GoogleFonts.archivoNarrow(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   color: Colors.white,
                   fontSize: 14,
                   fontFamily: 'Raleway'
