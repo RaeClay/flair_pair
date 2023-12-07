@@ -1,16 +1,23 @@
 import 'package:flair_pair/packages.dart';
 
-
 class PairingDetailScreen extends StatelessWidget {
   final BottomNavBarVM _viewModel = BottomNavBarVM();
   final String foodName;
   final String alcoholName;
   final String pairingDescription;
+  final List<String> keyIngredients;
+  final String flavorProfile;
+  final bool vegan;
+  final bool glutenFree;
 
-  PairingDetailScreen({super.key, 
+  PairingDetailScreen({
     required this.foodName,
     required this.alcoholName,
     required this.pairingDescription,
+    required this.keyIngredients,
+    required this.flavorProfile,
+    required this.vegan,
+    required this.glutenFree,
   });
 
   @override
@@ -30,8 +37,8 @@ class PairingDetailScreen extends StatelessWidget {
                     Container(
                       width: 100,
                       height: 100,
-                      color: Colors.blue, // Replace with your image or asset
-                      // Add image or asset decoration
+                      // Replace with image or asset decoration
+                      color: Colors.blue,
                     ),
                     const SizedBox(height: 8.0),
                     Text('Food: $foodName'),
@@ -44,8 +51,8 @@ class PairingDetailScreen extends StatelessWidget {
                     Container(
                       width: 100,
                       height: 100,
-                      color: Colors.red, // Replace with your image or asset
-                      // Add image or asset decoration
+                      // Replace with image or asset decoration
+                      color: Colors.red,
                     ),
                     const SizedBox(height: 8.0),
                     Text('Alcohol: $alcoholName'),
@@ -58,11 +65,31 @@ class PairingDetailScreen extends StatelessWidget {
               'Description: $pairingDescription',
               style: const TextStyle(fontSize: 16.0),
             ),
+            const SizedBox(height: 16.0),
+            Text(
+              'Key Ingredients: ${keyIngredients.join(", ")}',
+              style: const TextStyle(fontSize: 16.0),
+            ),
+            const SizedBox(height: 8.0),
+            Text(
+              'Flavor Profile: $flavorProfile',
+              style: const TextStyle(fontSize: 16.0),
+            ),
+            const SizedBox(height: 8.0),
+            Text(
+              'Vegan: ${vegan ? "Yes" : "No"}',
+              style: const TextStyle(fontSize: 16.0),
+            ),
+            const SizedBox(height: 8.0),
+            Text(
+              'Gluten-Free: ${glutenFree ? "Yes" : "No"}',
+              style: const TextStyle(fontSize: 16.0),
+            ),
             // Add more details as needed
           ],
         ),
       ),
-    bottomNavigationBar: BottomNavBar(viewModel: _viewModel, context: context),
+      bottomNavigationBar: BottomNavBar(viewModel: _viewModel, context: context),
     );
   }
 }

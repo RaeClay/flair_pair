@@ -112,6 +112,11 @@ void _onSearchTextChanged(String query) {
                   foodName: pairing.foodName,
                   alcoholName: pairing.alcoholName,
                   pairingDescription: pairing.pairingDescription,
+                  keyIngredients: pairing.keyIngredients,
+                  flavorProfile: pairing.flavorProfile,
+                  vegan: pairing.vegan,
+                  glutenFree: pairing.glutenFree,
+                  // Don't provide values for vegan and glutenFree
                 ),
               ),
             );
