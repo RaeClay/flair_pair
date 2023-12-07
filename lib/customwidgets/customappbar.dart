@@ -11,7 +11,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       automaticallyImplyLeading: false,
       toolbarHeight: preferredSize.height,
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF160A1D),
       title: Padding(
         padding: const EdgeInsets.only(top: 50, bottom: 20),
         child: Row(
@@ -21,18 +21,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               'FLAIRPAIR',
               style: GoogleFonts.bungeeShade(
                 textStyle: const TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontSize: 44,
                 ),
               ),
             ),
             const SizedBox(width: 10),
             Text(
-              'Elevate Your Enjoyment',
+              'Elevate Your Enjoyment.',
               style: GoogleFonts.archivoNarrow(
                 textStyle: TextStyle(
-                  color: Colors.black.withOpacity(0.6),
+                  color: Colors.white,
                   fontSize: 14,
+                  fontFamily: 'Raleway'
                 ),
               ),
             ),

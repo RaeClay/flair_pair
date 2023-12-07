@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => OnboardingPage1()),
+                            MaterialPageRoute(builder: (context) => const OnboardingPage1()),
                           );
                         },
                         style: ElevatedButton.styleFrom(

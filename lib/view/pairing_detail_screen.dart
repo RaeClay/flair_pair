@@ -10,7 +10,7 @@ class PairingDetailScreen extends StatelessWidget {
   final bool vegan;
   final bool glutenFree;
 
-  PairingDetailScreen({
+  PairingDetailScreen({super.key, 
     required this.foodName,
     required this.alcoholName,
     required this.pairingDescription,
