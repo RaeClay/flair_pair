@@ -102,7 +102,7 @@ class PairingRepository {
         vegan: true,
         glutenFree: true,
       ),
-    ],  // end of wine key
+    ],  // end of wine key (11 pairings)
     'Beer': [
       PairingModel(
         foodName: 'Pizza',
@@ -239,7 +239,7 @@ class PairingRepository {
         vegan: false,
         glutenFree: false,
       ),
-    ],  // end of beer key
+    ],  // end of beer key (15 pairings)
     'Sake': [
       PairingModel(
         foodName: 'Sushi',
@@ -295,7 +295,7 @@ class PairingRepository {
         vegan: false,
         glutenFree: false,
       ),
-    ],  // end of sake key
+    ],  // end of sake key (6 pairings)
     'Tequila': [
       PairingModel(
         foodName: 'Tacos',
@@ -396,7 +396,7 @@ class PairingRepository {
         vegan: false,
         glutenFree: true,
       ),
-    ],  // end of tequila key
+    ],  // end of tequila key (11 pairings)
     'Whiskey': [
       PairingModel(
         foodName: 'Smoked Salmon',
@@ -488,7 +488,7 @@ class PairingRepository {
         vegan: false,
         glutenFree: false,
       ),
-    ],  // end of whiskey key
+    ],  // end of whiskey key (10 pairings)
     'Gin': [
       PairingModel(
         foodName: 'Ceviche',
@@ -526,7 +526,7 @@ class PairingRepository {
         vegan: true,
         glutenFree: true,
       ),
-    ],  // end of gin key
+    ],  // end of gin key (4 pairings)
   }; // end of map (_allPairings) for hardcoded data
 
   Map<String, List<PairingModel>> getAllPairings() {
