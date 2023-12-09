@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\android",
+    "\\lib",
+    "\\lib\\models",
+    "\\lib\\view",
+    "\\lib\\viewmodel",
+    "\\windows"
+  ],
+  "SelectedNode": "\\lib\\view\\pairing_view.dart",
+  "PreviewInSolutionExplorer": false
+}
