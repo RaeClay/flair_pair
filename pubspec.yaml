@@ -65,16 +65,19 @@ flutter:
     - assets/images/start.png
     - assets/images/lightbulb.png
 
+
     # pictures for home screen
     - assets/images/mulled-wine.png
-    - assets/images/winter-background.jpg
+    - assets/images/winterbackground2.jpg
+    - assets/images/bbqbackground.jpg
+    - assets/images/beer-bottle.png
+    - assets/images/taco-background.jpg
+    - assets/images/margarita.png
 
   uses-material-design: true
 
   fonts:
-    - family: Volkorn
-      fonts:
-        - asset: assets/fonts/Volkorn-VariableFont_wght.ttf
+
     - family: RubikBubbles
       fonts:
         - asset: assets/fonts/RubikBubbles-Regular.ttf
