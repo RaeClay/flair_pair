@@ -24,32 +24,32 @@ class BottomNavBar extends StatelessWidget {
       ),
       child: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
-              child: const Icon(Icons.home),
+              padding: EdgeInsets.only(bottom: 10.0),
+              child: Icon(Icons.home),
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
-              child: const Icon(Icons.favorite),
+              padding: EdgeInsets.only(bottom: 10.0),
+              child: Icon(Icons.favorite),
             ),
             label: 'My Favorites',
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
-              child: const Icon(Icons.local_dining_sharp),
+              padding: EdgeInsets.only(bottom: 10.0),
+              child: Icon(Icons.local_dining_sharp),
             ),
             label: 'Find Pairings',
           ),
           BottomNavigationBarItem(
             icon: Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
-              child: const Icon(Icons.person),
+              padding: EdgeInsets.only(bottom: 10.0),
+              child: Icon(Icons.person),
             ),
             label: 'Profile',
           ),

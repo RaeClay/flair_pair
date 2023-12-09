@@ -73,6 +73,7 @@ flutter:
     - assets/images/beer-bottle.png
     - assets/images/taco-background.jpg
     - assets/images/margarita.png
+    - assets/images/tips-lightbulb.png
 
   uses-material-design: true
 
