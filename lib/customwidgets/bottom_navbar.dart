@@ -2,47 +2,55 @@
 This file contains the code that formats the bottom navigation bar
 and the logic needed to navigate to each page
 */
-
 import 'package:flair_pair/packages.dart';
-
 
 class BottomNavBar extends StatelessWidget {
   final BottomNavBarVM viewModel;
   final BuildContext context;
 
-
   const BottomNavBar({super.key, required this.viewModel, required this.context});
-
 
   @override
   Widget build(BuildContext context) {
     return Theme(
       data: Theme.of(context).copyWith(
-        // Set the bottom navigation bar theme
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Color(0xFF160A1D),
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
           selectedLabelStyle: TextStyle(fontFamily: 'ArchivoBlack'),
           unselectedLabelStyle: TextStyle(fontFamily: 'ArchivoBlack'),
         ),
       ),
       child: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.black,
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: const Icon(Icons.home),
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+            icon: Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: const Icon(Icons.favorite),
+            ),
             label: 'My Favorites',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_dining_sharp),
+            icon: Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: const Icon(Icons.local_dining_sharp),
+            ),
             label: 'Find Pairings',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Padding(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: const Icon(Icons.person),
+            ),
             label: 'Profile',
           ),
         ],
@@ -51,7 +59,7 @@ class BottomNavBar extends StatelessWidget {
           viewModel.selectTab(index);
           switch (index) {
             case 0:
-              Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage())); // Navigate to HomePage
+              Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
               break;
             case 1:
               Navigator.push(context, MaterialPageRoute(builder: (context) => FavoritesPage()));

@@ -127,7 +127,7 @@ List<Widget> carouselItems = [
 
             child: const Text(
               'Does this ever get old? No matter the taco filling or the flavor of margartia, this'
-                  ' classic combo never fails in brining a sigh of relief.',
+                  ' classic combo never fails in bringing a sigh of relief.',
               textAlign: TextAlign.center, // Center align the text
               style: TextStyle(
                 fontFamily: 'ArchivoBlack',

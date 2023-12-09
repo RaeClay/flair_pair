@@ -77,13 +77,13 @@ class HomePage extends StatelessWidget {
                           );
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
+                          backgroundColor: Color(0xFF0A1E24),
                           padding: const EdgeInsets.symmetric(vertical: 60), // Reduced padding
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           ),
                         ),
-                        child: const Text('Tips', style: TextStyle(color: Colors.black)),
+                        child: const Text('Tips', style: TextStyle(color: Colors.white)),
                       ),
                     ),
                     const SizedBox(width: 10),
@@ -93,13 +93,13 @@ class HomePage extends StatelessWidget {
                           // Implement action for 'For you'
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
+                          backgroundColor: Color(0xFF0A1E24),
                           padding: const EdgeInsets.symmetric(vertical: 60), // Reduced padding
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           ),
                         ),
-                        child: const Text('For you', style: TextStyle(color: Colors.black)),
+                        child: const Text('For you', style: TextStyle(color: Colors.white)),
                       ),
                     ),
                   ],
