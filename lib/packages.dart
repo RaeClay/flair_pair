@@ -6,6 +6,7 @@ export 'package:google_fonts/google_fonts.dart';
 
 // models
 export 'package:flair_pair/models/pairing_model.dart';
+export 'package:flair_pair/models/global_favorites.dart';
 
 // view models
 export 'package:flair_pair/viewmodel/pairing_view_model.dart';
