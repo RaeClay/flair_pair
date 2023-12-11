@@ -1,4 +1,3 @@
-
 import 'package:flair_pair/packages.dart';
 
 
@@ -68,7 +67,7 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 210, // Adjust width as needed
                       height: 130, // Adjust height as needed
                       child: ElevatedButton(
@@ -87,11 +86,11 @@ class HomePage extends StatelessWidget {
                         ),
                         child: Stack(
                           children: [
-                            Align(
+                            const Align(
                               alignment: Alignment.topLeft, // Aligns 'Tips' text to the top left
                               child: Padding(
-                                padding: const EdgeInsets.only(top: 10, left: 20), // Padding for the 'Tips' text
-                                child: const Text(
+                                padding: EdgeInsets.only(top: 10, left: 20), // Padding for the 'Tips' text
+                                child: Text(
                                   'Tips',
                                   style: TextStyle(
                                     color: Colors.white,
@@ -101,7 +100,7 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            Center( // Centered text
+                            const Center( // Centered text
                               child: Text(
                                 "How to pair like a pro...",
                                 style: TextStyle(
@@ -127,7 +126,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 10),
-                    Container(
+                    SizedBox(
                       width: 210, // Adjust the width as needed
                       height: 130, // Adjust the height as needed
                       child: ElevatedButton(
@@ -141,12 +140,12 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(30),
                           ),
                         ),
-                        child: Stack(
+                        child: const Stack(
                           children: [
                             Align(
                               alignment: Alignment.topLeft, // Aligns text to the top left
                               child: Padding(
-                                padding: const EdgeInsets.only(top: 10, left: 20), // Padding for the text
+                                padding: EdgeInsets.only(top: 10, left: 20), // Padding for the text
                                 child: Text(
                                   'Where to Pair',
                                   style: TextStyle(
@@ -170,7 +169,7 @@ class HomePage extends StatelessWidget {
                             Align(
                               alignment: Alignment.bottomRight, // Position for an image or icon
                               child: Padding(
-                                padding: const EdgeInsets.all(10), // Padding for the image/icon
+                                padding: EdgeInsets.all(10), // Padding for the image/icon
                                 child: Icon(
                                   dining, // Example icon, replace with your desired icon or image
                                   color: Colors.white,
