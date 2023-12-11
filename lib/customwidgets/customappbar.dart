@@ -11,36 +11,27 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       automaticallyImplyLeading: false,
       toolbarHeight: preferredSize.height,
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF160A1D),
       title: Padding(
         padding: const EdgeInsets.only(top: 50, bottom: 20),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text(
-              'FLAIRPAIR',
+              'PAIRFLAIR',
               style: GoogleFonts.bungeeShade(
                 textStyle: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 44,
+                  color: Colors.white,
+                  fontSize: 54,
                 ),
               ),
             ),
-            const SizedBox(width: 10),
-            Text(
-              'Elevate Your Enjoyment',
-              style: GoogleFonts.archivoNarrow(
-                textStyle: TextStyle(
-                  color: Colors.black.withOpacity(0.6),
-                  fontSize: 14,
-                ),
-              ),
-            ),
+
             const SizedBox(width: 5),
             const Icon(
               Icons.sports_bar,
               size: 16,
-              color: Colors.black,
+              color: Colors.white,
             ),
           ],
         ),

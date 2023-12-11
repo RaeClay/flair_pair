@@ -21,12 +21,12 @@ class PairingViewModel extends ChangeNotifier {
 
   // Iterate through allPairings, which is a map of alcohol types to lists of PairingModel
   _pairingRepository.getAllPairings().forEach((alcoholType, pairingList) {
-    pairingList.forEach((pairing) {
+    for (var pairing in pairingList) {
       if (pairing.foodName.toLowerCase().contains(query) ||
           pairing.alcoholName.toLowerCase().contains(query)) {
         results.add(pairing);
       }
-    });
+    }
   });
 
   return results;

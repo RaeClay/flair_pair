@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class BackgroundDeco {
   static BoxDecoration getRadialGradient() {
-    return BoxDecoration(
+    return const BoxDecoration(
       gradient: RadialGradient(
             colors: [
-              Colors.indigo[400]!,  //radial
-              const Color.fromARGB(255, 224, 224, 224),  //background
+              Colors.black,  //radial
+              Color(0xFF160A1D),  //background
             ],
             center: Alignment.center,
             radius: 0.75,

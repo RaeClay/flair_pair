@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class OnboardingPage1 extends StatelessWidget {
   const OnboardingPage1({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,26 +12,26 @@ class OnboardingPage1 extends StatelessWidget {
           OnboardingPageModel(
             title: 'Start Familiar.',
             description: 'Where to start? Begin your pairing adventure with flavors you already enjoy. Familiar tastes can provide a comfortable base for exploring new and complementary pairings.',
-            imageUrl: 'https://i.ibb.co/cJqsPSB/scooter.png',
+            imageUrl: 'assets/images/start.png',
             bgColor: Colors.indigo,
           ),
           OnboardingPageModel(
             title: 'Don\'t limit yourself.',
             description: 'Embrace the diverse, the exotic, and the unexpected. Every new dish is an adventure, and every global cuisine, a new chapter in your culinary exploration.',
-            imageUrl: 'https://i.ibb.co/LvmZypG/storefront-illustration-2.png',
+            imageUrl: 'assets/images/lightbulb.png',
             bgColor: const Color(0xff1eb090),
           ),
           OnboardingPageModel(
             title: 'Connect with your friends.',
             description: 'Enjoy what is meant to be enjoyed together. Swap recommendations, plan your next dinner party, or just chat about your latest culinary discoveries.',
-            imageUrl: 'https://i.ibb.co/cJqsPSB/scooter.png',
-            bgColor: const Color(0xfffeae4f),
+            imageUrl: 'assets/images/friends-toasting.png',
+            bgColor: const Color(0xFF8B43BC),
           ),
           OnboardingPageModel(
             title: 'Savor the Journey, Responsibly.',
             description: 'True enjoyment comes from savoring each pairing thoughtfully. Remember, the best indulgences are those enjoyed responsibly.',
-            imageUrl: 'https://i.ibb.co/cJqsPSB/scooter.png',
-            bgColor: Colors.purple,
+            imageUrl: 'assets/images/raise_glass.png',
+            bgColor: const Color(0xFF160A1D),
           ),
         ],
         onSkip: () => Navigator.pop(context),
@@ -40,20 +41,25 @@ class OnboardingPage1 extends StatelessWidget {
   }
 }
 
+
 class OnboardingPagePresenter extends StatefulWidget {
   final List<OnboardingPageModel> pages;
   final VoidCallback? onSkip;
   final VoidCallback? onFinish;
 
+
   const OnboardingPagePresenter({Key? key, required this.pages, this.onSkip, this.onFinish}) : super(key: key);
+
 
   @override
   State<OnboardingPagePresenter> createState() => _OnboardingPageState();
 }
 
+
 class _OnboardingPageState extends State<OnboardingPagePresenter> {
   int _currentPage = 0;
   final PageController _pageController = PageController(initialPage: 0);
+
 
   @override
   Widget build(BuildContext context) {
@@ -94,9 +100,11 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                                 padding: const EdgeInsets.all(16.0),
                                 child: Text(
                                   item.title,
-                                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                                  style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: item.textColor,
+                                    fontFamily: 'ArchivoBlack',
+                                    fontSize: 13,
                                   ),
                                 ),
                               ),
@@ -106,8 +114,10 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                                 child: Text(
                                   item.description,
                                   textAlign: TextAlign.center,
-                                  style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                                  style: TextStyle(
                                     color: item.textColor,
+                                    fontFamily: 'ArchivoBlack',
+                                    fontSize: 13,
                                   ),
                                 ),
                               ),
@@ -145,7 +155,11 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                       style: TextButton.styleFrom(
                         visualDensity: VisualDensity.comfortable,
                         foregroundColor: Colors.white,
-                        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'ArchivoBlack', // Set font family here
+                        ),
                       ),
                       onPressed: widget.onSkip,
                       child: const Icon(
@@ -157,7 +171,11 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                       style: TextButton.styleFrom(
                         visualDensity: VisualDensity.comfortable,
                         foregroundColor: Colors.white,
-                        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        textStyle: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'ArchivoBlack', // Set font family here
+                        ),
                       ),
                       onPressed: () {
                         if (_currentPage == widget.pages.length - 1) {
@@ -174,6 +192,9 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                         children: [
                           Text(
                             _currentPage == widget.pages.length - 1 ? "Finish" : "Next",
+                            style: const TextStyle(
+                              fontFamily: 'ArchivoBlack', // Set font family here
+                            ),
                           ),
                           const SizedBox(width: 8),
                           Icon(
@@ -193,12 +214,14 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
   }
 }
 
+
 class OnboardingPageModel {
   final String title;
   final String description;
   final String imageUrl;
   final Color bgColor;
   final Color textColor;
+
 
   OnboardingPageModel({
     required this.title,
