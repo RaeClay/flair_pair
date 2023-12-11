@@ -37,7 +37,7 @@ class PairingDetailScreen extends StatelessWidget {
                 child: Text(
                   '$foodName and $alcoholName',
                   style: const TextStyle(
-                    fontSize: 24.0, // Adjust the font size as needed
+                    fontSize: 28.0, // Adjust the font size as needed
                     color: Colors.white,
                     fontFamily: 'ArchivoBlack',
                   ),
@@ -67,8 +67,8 @@ class PairingDetailScreen extends StatelessWidget {
         style: const TextStyle(
           fontSize: 16.0,
           color: Colors.white,
-          fontFamily: 'ArchivoBlack',
-          height: 2.0,
+          fontFamily: 'Archivo',
+          height: 1.5,
         ),
         textAlign: TextAlign.justify,
       ),
