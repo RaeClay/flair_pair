@@ -106,7 +106,7 @@ class HomePage extends StatelessWidget {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 14,
-                                  fontFamily: 'ArchivoBlack', // Font size for the central text
+                                  fontFamily: 'Archivo', // Font size for the central text
                                 ),
                               ),
                             ),
@@ -162,7 +162,7 @@ class HomePage extends StatelessWidget {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 14,
-                                  fontFamily: 'ArchivoBlack', // Font size for the central text
+                                  fontFamily: 'Archivo', // Font size for the central text
                                 ),
                               ),
                             ),

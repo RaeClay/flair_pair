@@ -30,48 +30,44 @@ class PairingDetailScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               // Title with larger font size
               Center(
                 child: Text(
                   '$foodName and $alcoholName',
                   style: const TextStyle(
-                    fontSize: 28.0, // Adjust the font size as needed
+                    fontSize: 30.0, // Adjust the font size as needed
                     color: Colors.white,
                     fontFamily: 'ArchivoBlack',
                   ),
                 ),
               ),
-              const SizedBox(height: 16.0),
+              const SizedBox(height: 20.0),
               // Other details
-              _buildText(pairingDescription),
-              _buildText('Key Ingredients: ${keyIngredients.join(", ")}'),
-              _buildText('Flavor Profile: $flavorProfile'),
-              _buildText('Vegan: ${vegan ? "Yes" : "No"}'),
-              _buildText('Gluten-Free: ${glutenFree ? "Yes" : "No"}'),
-            
+              Container(
+                padding: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 2.0)
+                ),
+                child: Text(
+                  '$pairingDescription\n'
+                  'Key Ingredients:\n${keyIngredients.join(", ")}\n\n'
+                  'Flavor Profile:\n$flavorProfile\n\n'
+                  'Vegan: ${vegan ? "Yes" : "No"}\n'
+                  'Gluten-Free: ${glutenFree ? "Yes" : "No"}',
+                  style: const TextStyle(
+                    fontSize: 18.0,
+                    color: Colors.white,
+                    fontFamily: 'Archivo',
+                    height: 2.25,
+                  )
+                ),
+              ),
             ],
           ),
         ),
       ),
       bottomNavigationBar: BottomNavBar(viewModel: _viewModel, context: context),
-    );
-  }
-
-  Widget _buildText(String text) {
-    return Padding(
-      padding: const EdgeInsets.all(15.0),
-      child: Text(
-        text,
-        style: const TextStyle(
-          fontSize: 16.0,
-          color: Colors.white,
-          fontFamily: 'Archivo',
-          height: 1.5,
-        ),
-        textAlign: TextAlign.justify,
-      ),
     );
   }
 }

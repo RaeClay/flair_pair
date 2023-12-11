@@ -102,6 +102,15 @@ class PairingRepository {
         vegan: true,
         glutenFree: true,
       ),
+        PairingModel(
+        foodName: 'Boiled Child Liver',
+        alcoholName: 'Absinthe',
+        pairingDescription: 'Enjoy the delicacy of a starving child\'s liver paired with the old-time flavor of absinthe',
+        keyIngredients: ['Suffering', 'Dust', 'Blood', 'Tears'],
+        flavorProfile: 'Luxurious and unique',
+        vegan: false,
+        glutenFree: true,
+      ),
     ],  // end of wine key (11 pairings)
     'Beer': [
       PairingModel(

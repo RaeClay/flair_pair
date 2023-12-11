@@ -116,7 +116,7 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: item.textColor,
-                                    fontFamily: 'ArchivoBlack',
+                                    fontFamily: 'Archivo',
                                     fontSize: 13,
                                   ),
                                 ),
