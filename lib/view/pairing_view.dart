@@ -83,8 +83,6 @@ class _PairingsScreenState extends State<PairingsScreen> {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => PairingDetailScreen(
-                    // Add your parameters as needed
-                    // Example parameters (adjust as needed):
                     foodName: pairing.foodName,
                     alcoholName: pairing.alcoholName,
                     pairingDescription: pairing.pairingDescription,

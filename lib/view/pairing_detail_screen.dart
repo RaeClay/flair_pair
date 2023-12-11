@@ -10,7 +10,8 @@ class PairingDetailScreen extends StatelessWidget {
   final bool vegan;
   final bool glutenFree;
 
-  PairingDetailScreen({super.key, 
+  PairingDetailScreen({
+    Key? key,
     required this.foodName,
     required this.alcoholName,
     required this.pairingDescription,
@@ -18,7 +19,7 @@ class PairingDetailScreen extends StatelessWidget {
     required this.flavorProfile,
     required this.vegan,
     required this.glutenFree,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,71 +32,46 @@ class PairingDetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Row(
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          // Replace with image or asset decoration
-                          color: Colors.blue,
-                        ),
-                      ),
-                      const SizedBox(height: 8.0),
-                      Text('Food: $foodName'),
-                    ],
+              // Title with larger font size
+              Center(
+                child: Text(
+                  '$foodName and $alcoholName',
+                  style: const TextStyle(
+                    fontSize: 24.0, // Adjust the font size as needed
+                    color: Colors.white,
+                    fontFamily: 'ArchivoBlack',
                   ),
-                  const SizedBox(width: 16.0),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          // Replace with image or asset decoration
-                          color: Colors.red,
-                        ),
-                      ),
-                      const SizedBox(height: 8.0),
-                      Text('Alcohol: $alcoholName'),
-                    ],
-                  ),
-                ],
+                ),
               ),
               const SizedBox(height: 16.0),
-              Text(
-                'Description: $pairingDescription',
-                style: const TextStyle(fontSize: 16.0),
-              ),
-              const SizedBox(height: 16.0),
-              Text(
-                'Key Ingredients: ${keyIngredients.join(", ")}',
-                style: const TextStyle(fontSize: 16.0),
-              ),
-              const SizedBox(height: 8.0),
-              Text(
-                'Flavor Profile: $flavorProfile',
-                style: const TextStyle(fontSize: 16.0),
-              ),
-              const SizedBox(height: 8.0),
-              Text(
-                'Vegan: ${vegan ? "Yes" : "No"}',
-                style: const TextStyle(fontSize: 16.0),
-              ),
-              const SizedBox(height: 8.0),
-              Text(
-                'Gluten-Free: ${glutenFree ? "Yes" : "No"}',
-                style: const TextStyle(fontSize: 16.0),
-              ),
+              // Other details
+              _buildText(pairingDescription),
+              _buildText('Key Ingredients: ${keyIngredients.join(", ")}'),
+              _buildText('Flavor Profile: $flavorProfile'),
+              _buildText('Vegan: ${vegan ? "Yes" : "No"}'),
+              _buildText('Gluten-Free: ${glutenFree ? "Yes" : "No"}'),
+            
             ],
           ),
         ),
       ),
       bottomNavigationBar: BottomNavBar(viewModel: _viewModel, context: context),
+    );
+  }
+
+  Widget _buildText(String text) {
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontSize: 16.0,
+          color: Colors.white,
+          fontFamily: 'ArchivoBlack',
+          height: 2.0,
+        ),
+        textAlign: TextAlign.justify,
+      ),
     );
   }
 }
