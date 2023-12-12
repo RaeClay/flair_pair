@@ -22,7 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               style: GoogleFonts.bungeeShade(
                 textStyle: const TextStyle(
                   color: Colors.white,
-                  fontSize: 54,
+                  fontSize: 44,
                 ),
               ),
             ),
