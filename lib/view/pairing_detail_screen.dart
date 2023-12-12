@@ -36,7 +36,7 @@ class PairingDetailScreen extends StatelessWidget {
                 child: Text(
                   '$foodName and $alcoholName',
                   style: const TextStyle(
-                    fontSize: 30.0, // Adjust the font size as needed
+                    fontSize: 30.0,
                     color: Colors.white,
                     fontFamily: 'ArchivoBlack',
                     decoration: TextDecoration.underline,
@@ -44,7 +44,7 @@ class PairingDetailScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20.0),
-              // Other details & description
+              // Other details & description smaller font
               Container(
                 padding: const EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 15.0),
                 decoration: BoxDecoration(
@@ -66,12 +66,31 @@ class PairingDetailScreen extends StatelessWidget {
                   )
                 ),
               ),
-              ElevatedButton(
+              const SizedBox(height: 50.0),
+              TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: Text('Back to Search Results'),
-              ),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                  foregroundColor: MaterialStateProperty.all(Colors.blue), // Change the text color as needed
+                  textStyle: MaterialStateProperty.all(
+                    TextStyle(
+                      decoration: TextDecoration.underline,
+                      fontFamily: 'ArchivoBlack',
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.arrow_back),
+                    SizedBox(width: 8.0),
+                    Text('Back to Search Results'),
+                  ],
+                ),
+              )
             ],
           ),
         ),
