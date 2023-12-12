@@ -21,14 +21,14 @@ class PairingDetailScreen extends StatelessWidget {
     required this.glutenFree,
   }) : super(key: key);
 
-  @override
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(),
       body: Container(
         decoration: BackgroundDeco.getRadialGradient(),
         child: Padding(
-          padding: EdgeInsets.fromLTRB(15.0, 25.0, 15.0, 10.0),
+          padding: EdgeInsets.all(20.0),
           child: Column(
             children: [
               // Title with larger font size
@@ -45,25 +45,29 @@ class PairingDetailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20.0),
               // Other details & description smaller font
-              Container(
-                padding: const EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 15.0),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.25),
-                  border: Border.all(color: Colors.white, width: 2.0),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Text(
-                  '$pairingDescription\n\n'
-                  'Key Ingredients:\n${keyIngredients.join(", ")}\n\n'
-                  'Flavor Profile:\n$flavorProfile\n\n'
-                  'Vegan:\t ${vegan ? "Yes" : "No"}\n'
-                  'Gluten-Free:\t ${glutenFree ? "Yes" : "No"}',
-                  style: const TextStyle(
-                    fontSize: 14.0,
-                    color: Colors.white,
-                    fontFamily: 'Archivo',
-                    height: 2.25,
-                  )
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.all(25.0),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.25),
+                      border: Border.all(color: Colors.white, width: 2.0),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text(
+                      '$pairingDescription\n\n'
+                      'Key Ingredients:\n${keyIngredients.join(", ")}\n\n'
+                      'Flavor Profile:\n$flavorProfile\n\n'
+                      'Vegan:\t ${vegan ? "Yes" : "No"}\n'
+                      'Gluten-Free:\t ${glutenFree ? "Yes" : "No"}',
+                      style: const TextStyle(
+                        fontSize: 14.0,
+                        color: Colors.white,
+                        fontFamily: 'Archivo',
+                        height: 2.25,
+                      ),
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(height: 50.0),
@@ -90,7 +94,7 @@ class PairingDetailScreen extends StatelessWidget {
                     Text('Back to Search Results'),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

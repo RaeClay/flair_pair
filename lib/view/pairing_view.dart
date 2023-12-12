@@ -169,7 +169,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
                     ),
                     const SizedBox(height: 8.0),
                     Text(
-                      pairing.pairingDescription,
+                      pairing.flavorProfile,
                       style: const TextStyle(fontSize: 14.0, fontFamily: 'Archivo'),
                     ),
                     IconButton(

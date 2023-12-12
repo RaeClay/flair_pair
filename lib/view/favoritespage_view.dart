@@ -56,7 +56,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
                       ),
                       const SizedBox(height: 8.0),
                       Text(
-                        pairing.pairingDescription,
+                        pairing.flavorProfile,
                         style: const TextStyle(fontSize: 14.0),
                       ),
                       const Spacer(),
