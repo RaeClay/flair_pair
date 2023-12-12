@@ -78,10 +78,14 @@ class HomePage extends StatelessWidget {
                     ),
                     const SizedBox(width: 10), // Spacing between buttons
                     CustomButton(
-                      title: 'Where to Pair',
+                      title: 'View All Pairings',
                       icon: Icon(Icons.map, color: Colors.white, size: 35),
                       onPressed: () {
-                        // Implement action for 'For you'
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => ExploreAllPairingsPage(),
+                          ),
+                        );
                       },
                     ),
                   ],

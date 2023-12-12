@@ -18,6 +18,7 @@ export 'package:flair_pair/view/pairing_detail_screen.dart';
 export 'package:flair_pair/view/pairing_view.dart';
 export 'package:flair_pair/view/favoritespage_view.dart';
 export 'package:flair_pair/view/tips_view.dart';
+export 'package:flair_pair/view/explore_all_view.dart';
 
 // repositories
 export 'package:flair_pair/repositories/pairing_repository.dart';
