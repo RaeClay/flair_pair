@@ -75,6 +75,9 @@ flutter:
     - assets/images/margarita.png
     - assets/images/tips-lightbulb.png
 
+    # logo pic
+    - assets/images/logo.png
+
   uses-material-design: true
 
   fonts:

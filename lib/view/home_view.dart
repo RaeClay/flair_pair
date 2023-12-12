@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(),
+      appBar: const CustomAppBar(titleText: 'Home',),
       body: Container(
         decoration: BackgroundDeco.getRadialGradient(),
         child: Column(

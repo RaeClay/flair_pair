@@ -16,7 +16,7 @@ class PairingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // App bar with custom styling.
-      appBar: const CustomAppBar(),
+      appBar: const CustomAppBar(titleText: 'Pairing Search',),
       body: Container(
         // Background UI deco.
         decoration: BackgroundDeco.getRadialGradient(),

@@ -14,7 +14,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(),
+      appBar: const CustomAppBar(titleText: 'Favorites',),
       body: Container(
         decoration: BackgroundDeco.getRadialGradient(),
         child: Column(
