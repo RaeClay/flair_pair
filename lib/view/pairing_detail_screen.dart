@@ -28,7 +28,7 @@ class PairingDetailScreen extends StatelessWidget {
       body: Container(
         decoration: BackgroundDeco.getRadialGradient(),
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.fromLTRB(15.0, 25.0, 15.0, 10.0),
           child: Column(
             children: [
               // Title with larger font size
@@ -39,29 +39,38 @@ class PairingDetailScreen extends StatelessWidget {
                     fontSize: 30.0, // Adjust the font size as needed
                     color: Colors.white,
                     fontFamily: 'ArchivoBlack',
+                    decoration: TextDecoration.underline,
                   ),
                 ),
               ),
               const SizedBox(height: 20.0),
-              // Other details
+              // Other details & description
               Container(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 15.0),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 2.0)
+                  color: Colors.white.withOpacity(0.25),
+                  border: Border.all(color: Colors.white, width: 2.0),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
-                  '$pairingDescription\n'
+                  '$pairingDescription\n\n'
                   'Key Ingredients:\n${keyIngredients.join(", ")}\n\n'
                   'Flavor Profile:\n$flavorProfile\n\n'
-                  'Vegan: ${vegan ? "Yes" : "No"}\n'
-                  'Gluten-Free: ${glutenFree ? "Yes" : "No"}',
+                  'Vegan:\t ${vegan ? "Yes" : "No"}\n'
+                  'Gluten-Free:\t ${glutenFree ? "Yes" : "No"}',
                   style: const TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 14.0,
                     color: Colors.white,
                     fontFamily: 'Archivo',
                     height: 2.25,
                   )
                 ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text('Back to Search Results'),
               ),
             ],
           ),

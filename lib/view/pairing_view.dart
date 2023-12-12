@@ -70,7 +70,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
     return TextField(
       controller: _searchController,
       style: const TextStyle(color: Colors.white,
-        fontFamily: 'ArchivoBlack'),
+        fontFamily: 'Archivo'),
       decoration: const InputDecoration(
         labelText: 'Search Pairings',
         labelStyle: TextStyle(color: Colors.white,
@@ -79,7 +79,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
           borderSide: BorderSide(color: Colors.white),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
+          borderSide: BorderSide(color: Colors.white, width: 3.0),
         ),
         border: OutlineInputBorder(),
       ),
