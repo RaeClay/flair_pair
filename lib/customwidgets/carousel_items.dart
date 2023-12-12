@@ -28,19 +28,19 @@ List<Widget> carouselItems = [
             child: Row(
               mainAxisSize: MainAxisSize.min, // To align the contents in the center
               children: [
-                const Flexible( // Wrap the Text widget with Flexible
+                Expanded( // Allows the text to wrap if needed
                   child: Text(
                     'mulled wine and gingerbread',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 18, // Slightly reduced font size
                       fontFamily: 'ArchivoBlack',
                       fontWeight: FontWeight.w900,
                       color: Color(0xff9E6E61),
-
                     ),
-                    overflow: TextOverflow.ellipsis, // Prevents text from overflowing
+                    softWrap: true, // Allows text wrapping
                   ),
                 ),
+
                 const SizedBox(width: 10), // Provides some space between text and image
                 Image.asset(
                   'assets/images/mulled-wine.png', // Path to your image file
@@ -55,7 +55,9 @@ List<Widget> carouselItems = [
             padding: const EdgeInsets.all(10), // Add padding around the text
 
             child: const Text(
-              'Celebrate the cold weather with a pairing we love - a classic mulled wine with a rich, spiced gingerbread. The warmth of the wine complements the sweet and spicy flavors of the gingerbread, perfect for cozy winter evenings.',
+              'Celebrate the cold weather with a pairing we love - a '
+                  'classic mulled wine and spiced gingerbread, a perfect'
+                  ' cozy pairing for the sweet and spicy flavors. ',
               textAlign: TextAlign.center, // Center align the text
               style: TextStyle(
                 fontFamily: 'ArchivoBlack',
@@ -166,16 +168,16 @@ List<Widget> carouselItems = [
           Row(
             mainAxisSize: MainAxisSize.min, // To align the contents in the center
             children: [
-              const Flexible( // Wrap the Text widget with Flexible
+              Expanded( // Allows the text to wrap if needed
                 child: Text(
                   'pulled pork and amber ale',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 18, // Slightly reduced font size
                     fontFamily: 'ArchivoBlack',
                     fontWeight: FontWeight.w900,
                     color: Colors.white,
                   ),
-                  overflow: TextOverflow.ellipsis, // Prevents text from overflowing
+                  softWrap: true, // Allows text wrapping
                 ),
               ),
               const SizedBox(width: 10), // Provides some space between text and image
@@ -186,11 +188,13 @@ List<Widget> carouselItems = [
               ),
             ],
           ),
-          const SizedBox(height: 23),
+          const SizedBox(height: 17),
           Container(
             padding: const EdgeInsets.all(10), // Add padding around the text
             child: const Text(
-              'Smoky pulled pork meets the caramel smoothness of amber ale - the ale\'s subtle bitterness cuts through the richness of the pork, making each bite and sip a perfectly balanced flavor dance.',
+              'Smoky pulled pork paired with smooth amber ale'
+                  ' - subtle bitterness complements the rich pork,'
+                  ' creating a balanced flavor dance in each bite and sip.',
               textAlign: TextAlign.center, // Center align the text
               style: TextStyle(
                 fontFamily: 'ArchivoBlack',
