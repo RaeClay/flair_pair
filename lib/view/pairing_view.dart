@@ -62,7 +62,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
                 style: const TextStyle(
                   fontSize: 14.0,
                   color: Colors.white,
-                  fontFamily: 'ArchivoBlack'
+                  fontFamily: 'Archivo'
                 ),
               ),
               Switch(
@@ -79,7 +79,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
                 style: const TextStyle(
                   fontSize: 14.0,
                   color: Colors.white,
-                  fontFamily: 'ArchivoBlack'
+                  fontFamily: 'Archivo'
                 ),
               ),
               Switch(
@@ -100,25 +100,29 @@ class _PairingsScreenState extends State<PairingsScreen> {
     );
   }
 
-  Widget _buildSearchField() {
-    return TextField(
-      controller: _searchController,
-      style: const TextStyle(color: Colors.white, fontFamily: 'Archivo'),
-      decoration: const InputDecoration(
-        labelText: 'Search Pairings',
-        labelStyle: TextStyle(color: Colors.white, fontFamily: 'ArchivoBlack'),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white, width: 3.0),
-        ),
-        border: OutlineInputBorder(),
+Widget _buildSearchField() {
+  return TextField(
+    controller: _searchController,
+    style: const TextStyle(color: Colors.white, fontFamily: 'Archivo'),
+    decoration: InputDecoration(
+      labelText: 'Search Pairings',
+      labelStyle: TextStyle(color: Colors.white, fontFamily: 'ArchivoBlack'),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(20.0), // Set the border radius as needed
       ),
-      onChanged: _onSearchTextChanged,
-      cursorColor: Colors.white,
-    );
-  }
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white, width: 3.0),
+        borderRadius: BorderRadius.circular(20.0), // Set the border radius as needed
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20.0), // Set the border radius as needed
+      ),
+    ),
+    onChanged: _onSearchTextChanged,
+    cursorColor: Colors.white,
+  );
+}
 
   void _onSearchTextChanged(String query) {
     setState(() {
