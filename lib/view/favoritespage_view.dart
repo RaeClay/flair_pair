@@ -83,7 +83,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
                                 pairing.pairingDescription,
                                 style: const TextStyle(fontSize: 14.0),
                                 overflow: TextOverflow.ellipsis,
-                                maxLines: 3,
+                                maxLines: 2,
                               ),
                             ),
                             Align(
