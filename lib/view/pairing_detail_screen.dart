@@ -91,7 +91,7 @@ class PairingDetailScreen extends StatelessWidget {
                   children: [
                     Icon(Icons.arrow_back),
                     SizedBox(width: 8.0),
-                    Text('Back to Search Results'),
+                    Text('Back'),
                   ],
                 ),
               ),
