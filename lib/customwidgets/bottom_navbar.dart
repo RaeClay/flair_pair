@@ -35,13 +35,6 @@ class BottomNavBar extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.only(bottom: 10.0),
-              child: Icon(Icons.favorite),
-            ),
-            label: 'My Favorites',
-          ),
-          BottomNavigationBarItem(
-            icon: Padding(
-              padding: EdgeInsets.only(bottom: 10.0),
               child: Icon(Icons.local_dining_sharp),
             ),
             label: 'Find Pairings',
@@ -49,9 +42,9 @@ class BottomNavBar extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsets.only(bottom: 10.0),
-              child: Icon(Icons.person),
+              child: Icon(Icons.favorite),
             ),
-            label: 'Profile',
+            label: 'My Favorites',
           ),
         ],
         currentIndex: viewModel.selectedIndex,
@@ -62,14 +55,12 @@ class BottomNavBar extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
               break;
             case 1:
-              Navigator.push(context, MaterialPageRoute(builder: (context) => FavoritesPage()));
-              break;
-            case 2:
               Navigator.push(context, MaterialPageRoute(builder: (context) => PairingsPage()));
               break;
-            case 3:
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
+            case 2:
+              Navigator.push(context, MaterialPageRoute(builder: (context) => FavoritesPage()));
               break;
+
           }
         },
       ),

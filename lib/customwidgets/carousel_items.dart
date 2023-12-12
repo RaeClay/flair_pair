@@ -192,9 +192,7 @@ List<Widget> carouselItems = [
           Container(
             padding: const EdgeInsets.all(10), // Add padding around the text
             child: const Text(
-              'Smoky pulled pork paired with smooth amber ale'
-                  ' - subtle bitterness complements the rich pork,'
-                  ' creating a balanced flavor dance in each bite and sip.',
+                  'subtle bitterness complements the rich pork, creating a balanced flavor dance in each bite and sip.',
               textAlign: TextAlign.center, // Center align the text
               style: TextStyle(
                 fontFamily: 'ArchivoBlack',
