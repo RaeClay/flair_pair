@@ -1,40 +1,29 @@
 import 'package:flair_pair/packages.dart';
 
-// PairingsPage is a StatelessWidget representing the main page for pairings.
 class PairingsPage extends StatelessWidget {
-  // ViewModel for managing pairings data.
   final PairingViewModel _pairingViewModel = PairingViewModel(PairingRepository());
-
-  // ViewModel for the bottom navigation bar.
   final BottomNavBarVM _viewModel = BottomNavBarVM();
 
   // Constructor for PairingsPage.
   PairingsPage({super.key});
 
-  // Build method to define the widget's UI.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // App bar with custom styling.
       appBar: const CustomAppBar(titleText: 'Pairing Search',),
       body: Container(
-        // Background UI deco.
         decoration: BackgroundDeco.getRadialGradient(),
         // Main content represented by PairingsScreen widget.
         child: PairingsScreen(pairingViewModel: _pairingViewModel),
       ),
-      // Bottom navigation bar with custom ViewModel.
       bottomNavigationBar: BottomNavBar(viewModel: _viewModel, context: context),
     );
   }
 }
 
-// PairingsScreen is a StatefulWidget representing the screen that displays pairings.
+// PairingsScreen is a StatefulWidget representing the screen that displays pairings
 class PairingsScreen extends StatefulWidget {
-  // ViewModel for managing pairings data.
   final PairingViewModel pairingViewModel;
-
-  // Constructor for PairingsScreen.
   const PairingsScreen({super.key, required this.pairingViewModel});
 
   @override
@@ -59,7 +48,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
             children: [
               const Text(
                 'Vegan',
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 14.0,
                   color: Colors.white,
                   fontFamily: 'Archivo'
@@ -76,7 +65,7 @@ class _PairingsScreenState extends State<PairingsScreen> {
               ),
               const Text(
                 'Gluten-free',
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 14.0,
                   color: Colors.white,
                   fontFamily: 'Archivo'
@@ -100,29 +89,29 @@ class _PairingsScreenState extends State<PairingsScreen> {
     );
   }
 
-Widget _buildSearchField() {
-  return TextField(
-    controller: _searchController,
-    style: const TextStyle(color: Colors.white, fontFamily: 'Archivo'),
-    decoration: InputDecoration(
-      labelText: 'Search Pairings',
-      labelStyle: TextStyle(color: Colors.white, fontFamily: 'ArchivoBlack'),
-      enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.white),
-        borderRadius: BorderRadius.circular(20.0), // Set the border radius as needed
+  Widget _buildSearchField() {
+    return TextField(
+      controller: _searchController,
+      style: const TextStyle(color: Colors.white, fontFamily: 'Archivo'),
+      decoration: InputDecoration(
+        labelText: 'Search Pairings',
+        labelStyle: const TextStyle(color: Colors.white, fontFamily: 'ArchivoBlack'),
+        enabledBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.white),
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.white, width: 3.0),
+          borderRadius: BorderRadius.circular(20.0), 
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20.0), 
+        ),
       ),
-      focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.white, width: 3.0),
-        borderRadius: BorderRadius.circular(20.0), // Set the border radius as needed
-      ),
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20.0), // Set the border radius as needed
-      ),
-    ),
-    onChanged: _onSearchTextChanged,
-    cursorColor: Colors.white,
-  );
-}
+      onChanged: _onSearchTextChanged,
+      cursorColor: Colors.white,
+    );
+  }
 
   void _onSearchTextChanged(String query) {
     setState(() {

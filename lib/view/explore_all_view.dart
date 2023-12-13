@@ -30,7 +30,7 @@ class _ExploreAllPairingsPageState extends State<ExploreAllPairingsPage> with Si
       length: _sortedPairings.keys.length,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Explore All Pairings',
             style: TextStyle(
               fontFamily: 'ArchivoBlack',
@@ -72,7 +72,7 @@ class _ExploreAllPairingsPageState extends State<ExploreAllPairingsPage> with Si
                   child: ListTile(
                     title: Text('${pairing.foodName} with ${pairing.alcoholName}'),
                     subtitle: Text(pairing.pairingDescription),
-                    trailing: Icon(Icons.arrow_forward_ios),
+                    trailing: const Icon(Icons.arrow_forward_ios),
                   ),
                 );
               },

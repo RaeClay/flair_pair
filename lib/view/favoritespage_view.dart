@@ -19,7 +19,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
         decoration: BackgroundDeco.getRadialGradient(),
         child: Column(
           children: [
-            Padding(
+            const Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
                 children: [

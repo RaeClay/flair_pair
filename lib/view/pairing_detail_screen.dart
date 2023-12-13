@@ -79,14 +79,14 @@ class PairingDetailScreen extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(Colors.transparent),
                   foregroundColor: MaterialStateProperty.all(Colors.blue), // Change the text color as needed
                   textStyle: MaterialStateProperty.all(
-                    TextStyle(
+                    const TextStyle(
                       decoration: TextDecoration.underline,
                       fontFamily: 'ArchivoBlack',
                       fontSize: 16.0,
                     ),
                   ),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Icon(Icons.arrow_back),

@@ -22,9 +22,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             Padding(
               padding: const EdgeInsets.only(right: 8.0),
               child: Image.asset(
-                'assets/images/logo.png',  // Replace 'your_logo.png' with your actual logo image path
-                height: 75,  // Set the height of the logo as needed
-                width: 75,   // Set the width of the logo as needed
+                'assets/images/logo.png',  
+                height: 75,  
+                width: 75,   
               ),
             ),
             // Title Text

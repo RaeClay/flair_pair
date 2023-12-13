@@ -79,7 +79,7 @@ class HomePage extends StatelessWidget {
                     const SizedBox(width: 10), // Spacing between buttons
                     CustomButton(
                       title: 'View All Pairings',
-                      icon: Icon(Icons.map, color: Colors.white, size: 35),
+                      icon: const Icon(Icons.map, color: Colors.white, size: 35),
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
@@ -109,7 +109,7 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double maxButtonWidth = 140.0; // Fixed maximum width for each button
+    const double maxButtonWidth = 140.0;
     const double maxButtonHeight = 150.0;
 
     return Container(
@@ -118,8 +118,8 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          primary: const Color(0xFF0A1E24),
-          padding: EdgeInsets.symmetric(vertical: 15),
+          backgroundColor: const Color(0xFF0A1E24),
+          padding: const EdgeInsets.symmetric(vertical: 15),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
@@ -133,7 +133,7 @@ class CustomButton extends StatelessWidget {
               child: Text(
                 title,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                   fontFamily: 'ArchivoBlack',

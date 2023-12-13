@@ -28,7 +28,7 @@ List<Widget> carouselItems = [
             child: Row(
               mainAxisSize: MainAxisSize.min, // To align the contents in the center
               children: [
-                Expanded( // Allows the text to wrap if needed
+                const Expanded( // Allows the text to wrap if needed
                   child: Text(
                     'mulled wine and gingerbread',
                     style: TextStyle(
@@ -98,9 +98,9 @@ List<Widget> carouselItems = [
           const SizedBox(height: 20),
           Center(
             child: Row(
-              mainAxisSize: MainAxisSize.min, // To align the contents in the center
+              mainAxisSize: MainAxisSize.min, 
               children: [
-                const Flexible( // Wrap the Text widget with Flexible
+                const Flexible( 
                   child: Text(
                     'tacos and a marg',
                     style: TextStyle(
@@ -110,14 +110,14 @@ List<Widget> carouselItems = [
                       color: Color(0xffEBB314),
 
                     ),
-                    overflow: TextOverflow.ellipsis, // Prevents text from overflowing
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 const SizedBox(width: 10), // Provides some space between text and image
                 Image.asset(
-                  'assets/images/margarita.png', // Path to your image file
-                  width: 40, // Adjust the size as needed
-                  height: 40, // Adjust the size as needed
+                  'assets/images/margarita.png', 
+                  width: 40,
+                  height: 40, 
                 ),
               ],
             ),
@@ -130,7 +130,7 @@ List<Widget> carouselItems = [
             child: const Text(
               'Does this ever get old? No matter the taco filling or the flavor of margartia, this'
                   ' classic combo never fails in bringing a sigh of relief.',
-              textAlign: TextAlign.center, // Center align the text
+              textAlign: TextAlign.center, 
               style: TextStyle(
                 fontFamily: 'ArchivoBlack',
                 fontSize: 16,
@@ -168,32 +168,32 @@ List<Widget> carouselItems = [
           Row(
             mainAxisSize: MainAxisSize.min, // To align the contents in the center
             children: [
-              Expanded( // Allows the text to wrap if needed
+              const Expanded( // Allows the text to wrap if needed
                 child: Text(
                   'pulled pork and amber ale',
                   style: TextStyle(
-                    fontSize: 18, // Slightly reduced font size
+                    fontSize: 18, 
                     fontFamily: 'ArchivoBlack',
                     fontWeight: FontWeight.w900,
                     color: Colors.white,
                   ),
-                  softWrap: true, // Allows text wrapping
+                  softWrap: true, 
                 ),
               ),
               const SizedBox(width: 10), // Provides some space between text and image
               Image.asset(
-                'assets/images/beer-bottle.png', // Path to your image file
-                width: 40, // Adjust the size as needed
-                height: 40, // Adjust the size as needed
+                'assets/images/beer-bottle.png', 
+                width: 40, 
+                height: 40, 
               ),
             ],
           ),
           const SizedBox(height: 17),
           Container(
-            padding: const EdgeInsets.all(10), // Add padding around the text
+            padding: const EdgeInsets.all(10), 
             child: const Text(
                   'subtle bitterness complements the rich pork, creating a balanced flavor dance in each bite and sip.',
-              textAlign: TextAlign.center, // Center align the text
+              textAlign: TextAlign.center, 
               style: TextStyle(
                 fontFamily: 'ArchivoBlack',
                 fontSize: 16,
