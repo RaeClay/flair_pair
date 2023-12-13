@@ -74,6 +74,7 @@ flutter:
     - assets/images/taco-background.jpg
     - assets/images/margarita.png
     - assets/images/tips-lightbulb.png
+    - assets/images/logo.png
 
   uses-material-design: true
 

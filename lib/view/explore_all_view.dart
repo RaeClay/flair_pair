@@ -1,5 +1,6 @@
 
 import 'package:flair_pair/packages.dart';
+
 class ExploreAllPairingsPage extends StatefulWidget {
   @override
   _ExploreAllPairingsPageState createState() => _ExploreAllPairingsPageState();
@@ -29,7 +30,14 @@ class _ExploreAllPairingsPageState extends State<ExploreAllPairingsPage> with Si
       length: _sortedPairings.keys.length,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Explore All Pairings'),
+          title: Text(
+            'Explore All Pairings',
+            style: TextStyle(
+              fontFamily: 'ArchivoBlack',
+              fontSize: 20,
+            ),
+          ),
+          backgroundColor: const Color(0xFF160A1D),
           bottom: TabBar(
             controller: _tabController,
             isScrollable: true,
@@ -44,12 +52,31 @@ class _ExploreAllPairingsPageState extends State<ExploreAllPairingsPage> with Si
               itemCount: pairings.length,
               itemBuilder: (context, index) {
                 PairingModel pairing = pairings[index];
-                return ListTile(
-                  title: Text('${pairing.foodName} with ${pairing.alcoholName}'),
-                  subtitle: Text(pairing.pairingDescription),
+                return InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PairingDetailScreen(
+                          foodName: pairing.foodName,
+                          alcoholName: pairing.alcoholName,
+                          pairingDescription: pairing.pairingDescription,
+                          keyIngredients: pairing.keyIngredients,
+                          flavorProfile: pairing.flavorProfile,
+                          vegan: pairing.vegan,
+                          glutenFree: pairing.glutenFree,
+                        ),
+                      ),
+                    );
+                  },
+                  child: ListTile(
+                    title: Text('${pairing.foodName} with ${pairing.alcoholName}'),
+                    subtitle: Text(pairing.pairingDescription),
+                    trailing: Icon(Icons.arrow_forward_ios),
+                  ),
                 );
               },
-              separatorBuilder: (context, index) => Divider(), // Adding a Divider here
+              separatorBuilder: (context, index) => Divider(color: Colors.grey[800]),
             );
           }).toList(),
         ),
