@@ -24,7 +24,7 @@ class PairingDetailScreen extends StatelessWidget {
     @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(titleText: 'Pairing Details',),
+      appBar: const CustomAppBar(titleText: 'Pairing',),
       body: Container(
         decoration: BackgroundDeco.getRadialGradient(),
         child: Padding(
